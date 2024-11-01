@@ -54,6 +54,10 @@ public class ConsistentHashing {
         return ring.get(hash);
     }
 
+    public long GetHash(String key){
+        return generateHash(key);
+    }
+
     private long generateHash(String key){
         md.reset();
         md.update(key.getBytes(StandardCharsets.UTF_8));
